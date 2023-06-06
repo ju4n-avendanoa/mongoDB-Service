@@ -1,9 +1,9 @@
 import { describe, it, expect, beforeAll, afterAll, afterEach } from "vitest";
 import request from "supertest";
-import app from "../src/app";
+import app from "../app";
 import dbConnection from "../schema/dbConnection.js";
 import userModel from "../schema/userSchema.js";
-import { hashPassword } from "../src/hashing";
+import { hashPassword } from "../hashing";
 import bcrypt from "bcryptjs";
 
 describe("Integration tests for API requests", () => {

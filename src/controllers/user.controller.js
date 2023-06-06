@@ -1,5 +1,5 @@
 import userModel from "../schema/userSchema.js";
-import { hashPassword } from "../src/hashing.js";
+import { hashPassword } from "../hashing.js";
 
 export async function getUser(req, res) {
   try {
