@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeAll, afterAll, afterEach } from "vitest";
+import { describe, it, expect, beforeAll, afterEach } from "vitest";
 import request from "supertest";
 import app from "../app";
 import dbConnection from "../schema/dbConnection.js";
@@ -28,18 +28,19 @@ describe("Integration tests for API requests", () => {
     password: "123abc",
   };
 
-  /*  
+  /*
   This section will test the GET requests
-  */
+*/
 
   describe("GET requests", () => {
-    //GET all the users in the database
-
+    // GET all the users in the database
     it("GET /api/users", async () => {
       const { body, statusCode } = await request(app).get("/api/users");
 
+      // Expect the status code to be 200
       expect(statusCode).toBe(200);
 
+      // Expect the response body to be an array containing objects with specific properties
       expect(body).toEqual(
         expect.arrayContaining([
           expect.objectContaining({
@@ -81,6 +82,7 @@ describe("Integration tests for API requests", () => {
 
       expect(statusCode).toBe(200);
 
+      // Expect the response body to be an object containing specific properties
       expect(body).toEqual(
         expect.objectContaining({
           name: expect.any(String),
@@ -91,22 +93,23 @@ describe("Integration tests for API requests", () => {
     });
   });
 
-  /*  
+  /*
   This section will test the PATCH requests
-  */
+*/
 
-  describe("PATCH requets", () => {
+  describe("PATCH requests", () => {
     const noPassData = {
       phone: 456,
       email: "JhonDoe@email.com",
     };
 
-    it("PATCH /api/user:id  -- No Password", async () => {
+    it("PATCH /api/users/:id -- No Password", async () => {
       const user = userModel.create(data);
       const { body, statusCode } = await request(app)
         .patch(`/api/users/${user._id}`)
         .send(noPassData);
 
+      // Expect the response body to be an object containing specific properties
       expect(body).toEqual(
         expect.objectContaining({
           name: expect.any(String),
@@ -139,14 +142,14 @@ describe("Integration tests for API requests", () => {
 Test if the hashing function works correctly
 */
 
-describe("Hasing password", () => {
+describe("Hashing password", () => {
   it("A hash must be used on passwords", async () => {
     const password = "12345";
 
-    // Generar el hash de la contraseña
+    // Generate the hash of the password
     const hashedPassword = await hashPassword(password);
 
-    // Comparar el hash con la contraseña original
+    // Compare the hash with the original password
     const match = await bcrypt.compare(password, hashedPassword);
 
     expect(match).toBe(true);

@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 
+// Define the user schema using Mongoose
 const userSchema = new mongoose.Schema(
   {
     name: {
@@ -17,11 +18,12 @@ const userSchema = new mongoose.Schema(
     },
   },
   {
-    timestamps: true,
-    versionKey: false,
+    timestamps: true, // Adds "createdAt" and "updatedAt" fields
+    versionKey: false, // Disables the "__v" field
   }
 );
 
+// Create a model based on the user schema
 const userModel = mongoose.model("Usuarios", userSchema);
 
 export default userModel;

@@ -3,41 +3,41 @@ services:
   node:
     image: "node"
     ports:
-      - "5000:5000"
+      - "5000:5000" # Forward port 5000 on the host to port 5000 on the container
     working_dir: /home/node/app
     volumes:
-      - ./:/home/node/app
-    command: "npm run dev"
+      - ./:/home/node/app # Mount the current directory to the container's working directory
+    command: "npm run dev" # Run the "npm run dev" command when starting the container
     networks:
-      - myNetwork
+      - myNetwork # Connect to the "myNetwork" network
     depends_on:
-      - mongodb
+      - mongodb # Depend on the "mongodb" service
 
   mongodb:
     image: mongo
     container_name: mongodb
     restart: always
     volumes:
-      - mongo-db:/data/db
+      - mongo-db:/data/db # Mount a volume for storing MongoDB data
     networks:
-      - myNetwork
+      - myNetwork # Connect to the "myNetwork" network
 
   mongo-express:
     image: mongo-express
     container_name: mongo_express
     restart: always
     ports:
-      - 8081:8081
+      - 8081:8081 # Forward port 8081 on the host to port 8081 on the container
     environment:
-      - ME_CONFIG_MONGODB_SERVER=mongodb
-      - ME_CONFIG_BASICAUTH_USERNAME=root
-      - ME_CONFIG_BASICAUTH_PASSWORD=root
+      - ME_CONFIG_MONGODB_SERVER=mongodb # Set the MongoDB server URL for Mongo Express
+      - ME_CONFIG_BASICAUTH_USERNAME=root # Set the basic authentication username
+      - ME_CONFIG_BASICAUTH_PASSWORD=root # Set the basic authentication password
     networks:
-      - myNetwork
+      - myNetwork # Connect to the "myNetwork" network
 
 networks:
   myNetwork:
-    driver: bridge
+    driver: bridge # Use the bridge network driver for the "myNetwork" network
 
 volumes:
-  mongo-db:
+  mongo-db: # Define a volume named "mongo-db" for storing MongoDB data
