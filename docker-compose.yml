@@ -1,13 +1,13 @@
 version: "3.9"
 services:
   node:
-    image: "node"
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "5000:5000" # Forward port 5000 on the host to port 5000 on the container
-    working_dir: /home/node/app
     volumes:
       - ./:/home/node/app # Mount the current directory to the container's working directory
-    command: "npm run dev" # Run the "npm run dev" command when starting the container
     networks:
       - myNetwork # Connect to the "myNetwork" network
     depends_on:
