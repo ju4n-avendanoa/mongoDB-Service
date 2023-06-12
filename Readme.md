@@ -54,10 +54,3 @@ Make sure to update the necessary configurations in the test files according to 
 ## Contributing
 
 Contributions are welcome! If you want to improve this project, feel free to open an issue or submit a pull request. Please follow best development practices and provide a clear description of the proposed changes.
-
-## License
-
-This project is licensed under the MIT License. For more details, see the [LICENSE](LICENSE) file.
-
-I hope this README is helpful for your repository. If you have any other questions or need further assistance, feel free to ask. Good luck with your project!
-
