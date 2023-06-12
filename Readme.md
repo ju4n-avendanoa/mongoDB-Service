@@ -53,4 +53,4 @@ Make sure to update the necessary configurations in the test files according to 
 
 ## Contributing
 
-Contributions are welcome! If you want to improve this project, feel free to open an issue or submit a pull request. Please follow best development practices and provide a clear description of the proposed changes.
+Contributions are welcome! If you want to improve this project, feel free to open an [issue](https://github.com/ju4n-avendanoa/mongoAPI/issues) or submit a pull request. Please follow best development practices and provide a clear description of the proposed changes.
