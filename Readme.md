@@ -9,6 +9,14 @@ Make sure you have the following installed before proceeding:
 - Node.js (version 10 or higher)
 - MongoDB (local or remote instance)
 
+
+## Environment Variables
+
+The following environment variables are used in this application:
+
+- `PORT`: The port number on which MongoDB is running.
+- `MONGO_URI`: The full URI of the MongoDB connection (e.g., `mongodb://<username>:<password>@<host>:<port>/<database>`).
+
 ## Installation
 
 Follow these steps to set up and run the API:
@@ -19,7 +27,7 @@ Follow these steps to set up and run the API:
  
 3. Install the necessary dependencies:
 
-4. Configure the MongoDB connection. Create a `.env` file and adjust the values according to your setup:
+4. Configure the MongoDB connection. Create a `.env` file and adjust the environment variables according to your setup
 
 ## Endpoints
 
