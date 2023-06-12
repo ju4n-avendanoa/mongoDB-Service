@@ -1,4 +1,4 @@
-# mongoAPI
+# mongoDB-Service
 
 mongoAPI is a RESTful API developed in Node.js and Express, which connects to a MongoDB database to perform CRUD (Create, Read, Update, Delete) operations on a specific collection.
 
