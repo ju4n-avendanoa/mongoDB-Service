@@ -20,17 +20,15 @@ Follow the steps below to run the MongoAPI application in your local environment
 
 2. Navigate to the repository directory:
 
-  ```bash
-  cd mongoAPI
-  ```
+   ```bash
+   cd mongoAPI
   
 3. Open the docker-compose.yml file and verify the configuration for the MongoDB service. You can modify the values of MONGO_INITDB_ROOT_USERNAME and MONGO_INITDB_ROOT_PASSWORD according to your needs.
 
 4. Start the containers using Docker Compose:
   
-  ```bash
-  docker-compose up -d
-  ```
+   ```bash
+   docker-compose up -d
   
  5. The MongoAPI application should now be up and running. You can access it via http://localhost:3000.
 
