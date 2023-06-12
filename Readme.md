@@ -19,13 +19,7 @@ Follow these steps to set up and run the API:
  
 3. Install the necessary dependencies:
 
-4. Configure the MongoDB connection. Open the `config.js` file and adjust the values according to your setup:
-
-```javascript
-module.exports = {
-  mongoURI: 'mongodb://localhost:27017/my-database',
-};
-```
+4. Configure the MongoDB connection. Create a `.env` file and adjust the values according to your setup:
 
 ## Endpoints
 
