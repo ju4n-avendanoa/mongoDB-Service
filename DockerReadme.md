@@ -38,4 +38,5 @@ If you want to make changes to the application configuration or the runtime envi
 
 ## Contribution
 
-If you want to contribute to this project, you can submit pull requests with your improvements or report issues in the Issues section.
+If you want to contribute to this project, you can submit pull requests with your improvements or [report issues](https://github.com/ju4n-avendanoa/mongoAPI/issues) in the Issues section.
+
