@@ -44,7 +44,9 @@ The following endpoints are available in the API:
 
 The API includes both unit and integration tests using Vitest. To run the tests, use the following command:
 
-```npm test```
+```javascript
+npm test
+```
 
 Make sure to update the necessary configurations in the test files according to your setup.
 
