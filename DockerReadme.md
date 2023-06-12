@@ -2,6 +2,16 @@
 
 This repository contains the necessary files to run the MongoAPI application in a Docker environment using Docker Compose.
 
+## Environment Variables
+
+The following environment variables are used in this application:
+
+- `ME_CONFIG_MONGODB_SERVER`: The hostname or IP address of the MongoDB server.
+- `ME_CONFIG_BASICAUTH_USERNAME`: The username for authenticating with MongoDB.
+- `ME_CONFIG_BASICAUTH_PASSWORD`: The password for authenticating with MongoDB.
+- `MONGO_URI`: The full URI of the MongoDB connection (e.g., `mongodb://<username>:<password>@<host>:<port>/<database>`).
+- `MONGO_PORT`: The port number on which MongoDB is running.
+
 ## Prerequisites
 
 Make sure you have Docker and Docker Compose installed on your machine before proceeding.
