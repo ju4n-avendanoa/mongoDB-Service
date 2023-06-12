@@ -15,7 +15,7 @@ Make sure you have the following installed before proceeding:
 The following environment variables are used in this application:
 
 - `PORT`: The port number on which MongoDB is running.
-- `MONGO_URI`: The full URI of the MongoDB connection (e.g., `mongodb://<username>:<password>@<host>:<port>/<database>`).
+- `MONGODB_URI`: The full URI of the MongoDB connection (e.g., `mongodb://<username>:<password>@<host>:<port>/<database>`).
 
 ## Installation
 
