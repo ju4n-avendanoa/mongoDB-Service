@@ -10,7 +10,7 @@ dotenv.config({ path: ".env" });
  */
 async function dbConnection() {
   try {
-    await mongoose.connect("mongodb://mongodb:27017/mydb");
+    await mongoose.connect(process.env.MONGO_URI);
     console.log(`Database is connected`);
   } catch (error) {
     throw new Error(error);
