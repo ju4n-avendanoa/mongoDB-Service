@@ -39,6 +39,16 @@ The following endpoints are available in the API:
 - `PUT /api/users/:id`: Update an existing document by its ID.
 - `DELETE /api/users/:id`: Delete a specific document by its ID.
 
+
+## Testing
+
+The API includes both unit and integration tests using Vitest. To run the tests, use the following command:
+
+npm test
+
+Make sure to update the necessary configurations in the test files according to your setup.
+
+
 ## Contributing
 
 Contributions are welcome! If you want to improve this project, feel free to open an issue or submit a pull request. Please follow best development practices and provide a clear description of the proposed changes.
