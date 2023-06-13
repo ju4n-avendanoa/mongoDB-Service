@@ -31,7 +31,7 @@ Follow these steps to set up and run the API:
 
 ## Endpoints
 
-The API should now be up and running at `http://localhost:3000`. You can test it using an HTTP client tool like Postman.
+The API should now be up and running at `http://localhost:5000`. You can test it using an HTTP client tool like Postman.
 
 The following endpoints are available in the API:
 
